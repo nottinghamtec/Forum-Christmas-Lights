@@ -18,7 +18,7 @@ var Y = {
 function XLSF(oTarget,urlBase) {
 //   var writeDebug = soundManager._wD;
   var urlBase = (urlBase?urlBase:'lights/');
-  writeDebug('XLSF()');
+//   writeDebug('XLSF()');
   var IS_MOON_COMPUTER = false;
   var isIE = navigator.userAgent.match(/msie/i);
   var self = this;
@@ -93,7 +93,7 @@ function XLSF(oTarget,urlBase) {
   }
 
   this.appendLights = function() {
-	writeDebug('xlsf.appendLights()');
+// 	writeDebug('xlsf.appendLights()');
     self.oTarget.appendChild(self.oFrag);
     self.oFrag = document.createDocumentFragment();
   }
