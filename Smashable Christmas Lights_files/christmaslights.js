@@ -463,6 +463,6 @@ function smashInit() {
 //     smashInit();
 //   },
 //   ontimeout: function() {
-//     smashInit();
+    smashInit();
 //   }
 // });
