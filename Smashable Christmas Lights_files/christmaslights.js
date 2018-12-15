@@ -429,8 +429,8 @@ function XLSF(oTarget,urlBase) {
   // start lights to the right of <h1>
   var offset = 0; // parseInt(document.getElementsByTagName('h1')[0].offsetWidth)+16;
 
-  var jMax = Math.floor((screenX-offset-16)/self.lightXY);
-  var iMax = Math.floor((screenY-offset-16)/self.lightXY);
+  var jMax = Math.floor((screenX-offset)/self.lightXY);
+  var iMax = Math.floor((screenY-offset)/self.lightXY);
 
   for (j=0; j<jMax; j++) {
     this.createLight('top',parseInt(j/3)%4,offset+j*self.lightXY,0);
