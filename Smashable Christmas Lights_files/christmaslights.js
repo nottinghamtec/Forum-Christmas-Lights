@@ -463,6 +463,9 @@ function smashInit() {
 //     smashInit();
 //   },
 //   ontimeout: function() {
+document.addEventListener("DOMContentLoaded", function(event) {
     smashInit();
+});
+   
 //   }
 // });
