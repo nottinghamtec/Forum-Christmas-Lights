@@ -16,7 +16,7 @@ var Y = {
 }
 
 function XLSF(oTarget,urlBase) {
-  var writeDebug = soundManager._wD;
+//   var writeDebug = soundManager._wD;
   var urlBase = (urlBase?urlBase:'lights/');
   writeDebug('XLSF()');
   var IS_MOON_COMPUTER = false;
@@ -81,13 +81,13 @@ function XLSF(oTarget,urlBase) {
 
   this.initSounds = function() {
 	for (var i=0; i<6; i++) {
-	  soundManager.createSound({
-	    id: 'smash'+i,
-	    url: urlBase+'sound/glass'+i+'.mp3',
-	    autoLoad: true,
-	    multiShot: true,
-		volume:50
-	  });
+// 	  soundManager.createSound({
+// 	    id: 'smash'+i,
+// 	    url: urlBase+'sound/glass'+i+'.mp3',
+// 	    autoLoad: true,
+// 	    multiShot: true,
+// 		volume:50
+// 	  });
 	}
     self.initSounds = function() {} // safety net
   }
@@ -315,11 +315,11 @@ function XLSF(oTarget,urlBase) {
     this.smash = function(e) {
       if (self.broken) return false;
       self.broken = true;
-      if (soundManager && soundManager.ok() && false) {
-        soundManager.play(self.soundID,{pan:self.pan});
-        // soundManager.sounds[self.soundID].play({pan:self.pan});
-        // if (self.bonusSound != null) window.setTimeout(self.smashBonus,1000);
-      }
+//       if (soundManager && soundManager.ok() && false) {
+//         soundManager.play(self.soundID,{pan:self.pan});
+//         // soundManager.sounds[self.soundID].play({pan:self.pan});
+//         // if (self.bonusSound != null) window.setTimeout(self.smashBonus,1000);
+//       }
       self.explode(e);
       var rndFrame = 2; // +parseInt(Math.random()*3);
       if (self.useY) {
@@ -455,14 +455,14 @@ function smashInit() {
   xlsf.initSounds();
 }
 
-soundManager.setup({
-  flashVersion: 9,
-  preferFlash: false,
-  url: 'lights/',
-  onready: function() {
-    smashInit();
-  },
-  ontimeout: function() {
-    smashInit();
-  }
-});
+// soundManager.setup({
+//   flashVersion: 9,
+//   preferFlash: false,
+//   url: 'lights/',
+//   onready: function() {
+//     smashInit();
+//   },
+//   ontimeout: function() {
+//     smashInit();
+//   }
+// });
